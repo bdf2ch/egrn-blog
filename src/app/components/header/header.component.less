@@ -1,0 +1,29 @@
+@header-height: 100px;
+@header-font-family: 'Exo 2', sans-serif;
+@header-font-size: 1.1em;
+@header-logo-width: 150px;
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: @header-height;
+  font-family: @header-font-family;
+  font-size: @header-font-size;
+
+  .logo {
+    width: @header-logo-width;
+  }
+
+  .menu {
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #353535;
+      margin-right: 100px;
+      &:hover {
+        color: #1565c0;
+      }
+    }
+  }
+}
