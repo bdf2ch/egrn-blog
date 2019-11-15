@@ -16,9 +16,26 @@ export const selectLoadingDataInProgress = createSelector(
 );
 
 /**
+ * Селектор состяния видимости боковой панели
+ */
+export const selectSideBarOpened = createSelector(
+  selectBlog,
+  (state: IBlogState) => state.isSideBarOpened
+);
+
+/**
  * Селектор постов блога
  */
 export const selectPosts = createSelector(
   selectBlog,
   (state: IBlogState) => state.posts
 );
+
+/**
+ * Селектор текущего поста блога
+ */
+export const selectSelectedPost = createSelector(
+  selectBlog,
+  (state: IBlogState) => state.selectedPost
+);
+

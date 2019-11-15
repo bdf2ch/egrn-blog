@@ -2,9 +2,25 @@
   <a class="logo" href="https://egrnportal.ru">
     <img src="/assets/logo.svg" alt="">
   </a>
-  <nav class="menu nav">
-    <a href="https://egrnportal.ru" target="_blank">Услуги</a>
-    <a href="https://egrnportal.ru" target="_blank">Условия</a>
-    <a href="https://egrnportal.ru" target="_blank">Оплата</a>
+
+  <nav class="nav-bar d-none d-md-flex col-md-6 justify-content-between align-items-center pl-md-4 flex-row justify-content-between">
+    <ul class="nav w-100 d-flex flex-row justify-content-between">
+      <li class="nav-item">
+        <a href="https://egrnportal.ru" class="item-link" target="_blank">Услуги</a>
+      </li>
+      <li class="nav-item">
+        <a href="https://egrnportal.ru" class="item-link" target="_blank">Условия</a>
+      </li>
+      <li class="nav-item">
+        <a href="https://egrnportal.ru" class="item-link" target="_blank">Оплата</a>
+      </li>
+    </ul>
   </nav>
+
+  <div class="open-sidebar d-flex d-md-none" (click)="openSideBar()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false">
+      <title>Menu</title>
+      <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path>
+    </svg>
+  </div>
 </div>

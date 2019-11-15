@@ -1,5 +1,5 @@
-<div class="container">
-
+<div class="container position-relative">
+  <!-- Start: Шапка -->
   <header>
     <div class="row">
       <div class="col-12">
@@ -7,7 +7,9 @@
       </div>
     </div>
   </header>
+  <!-- Start: Шапка -->
 
+  <!-- Start: Контент -->
   <main>
     <div class="row">
       <div class="col-12">
@@ -15,9 +17,55 @@
       </div>
     </div>
   </main>
+  <!-- Start: Контент -->
 
-  <footer>
-
+  <!-- Start: Футер -->
+  <footer class="text-center mt-4 justify-content-center border-top pt-0 pt-md-4 mb-2 mb-md-5">
+    <nav class="nav-bar d-none d-md-flex flex-row w-50 justify-content-center align-items-center pl-md-4 ml-auto mr-auto">
+      <ul class="nav w-100 d-flex flex-row justify-content-between">
+        <li class="nav-item">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Поиск объекта</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Услуги</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Условия</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Оплата</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyright text-center mt-2 mt-md-5">
+      © 2018-2019 — ЕгрнПортал, <a href="mailto:info@egrnportal.ru">info@egrnportal.ru</a>
+      <br>
+      ИНН 421410396591, Новосибирская обл, рп Кольцово, ул Молодёжная, д 1, кв 40
+    </div>
   </footer>
-
+  <!-- End: Футер -->
 </div>
+
+<!-- Start: боковая панель -->
+<div id="sidebar" [ngClass]="{'closed': !(isSideBarOpened$ | async)}">
+  <div class="close p-3" (click)="closeSideBar()">&times;</div>
+  <div class="menu p-3">
+    <nav class="nav-bar">
+      <ul class="nav w-100 d-flex flex-column justify-content-center align-items-center">
+        <li class="nav-item pt-2 pb-2">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Поиск объекта</a>
+        </li>
+        <li class="nav-item pt-2 pb-2">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Услуги</a>
+        </li>
+        <li class="nav-item pt-2 pb-2">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Условия</a>
+        </li>
+        <li class="nav-item pt-2 pb-2">
+          <a href="https://egrnportal.ru" class="item-link" target="_blank">Оплата</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!-- End: боковая панель -->

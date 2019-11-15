@@ -15,15 +15,28 @@
     width: @header-logo-width;
   }
 
-  .menu {
+  .nav-bar {
     a {
       text-decoration: none;
-      font-size: 16px;
+      font-size: 1.1em;
       color: #353535;
-      margin-right: 100px;
+      // margin-right: 100px;
+      transition: opacity .2s ease-in-out,color .2s ease-in-out;
       &:hover {
         color: #1565c0;
       }
+    }
+  }
+
+  svg {
+    cursor: pointer;
+    &:hover {
+      path {
+        color: #78909c;
+      }
+    }
+    path {
+      color: #b0bec5;
     }
   }
 }

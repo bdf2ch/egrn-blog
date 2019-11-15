@@ -4,8 +4,10 @@ import { Post } from '../models';
  * Интерфейс, описывающий состояние блога
  */
 export interface IBlogState {
-  isLoadingDataInProgress: boolean;
-  posts: Post[];
+  isLoadingDataInProgress: boolean;   // Выполняется ли загрузка данных
+  isSideBarOpened: boolean;           // Открыта ли боковая панель
+  posts: Post[];                      // Перечень постов
+  selectedPost: Post;                 // Текущий пост
 }
 
 /**
@@ -13,7 +15,9 @@ export interface IBlogState {
  */
 export const blogInitialState: IBlogState = {
   isLoadingDataInProgress: false,
-  posts: []
+  isSideBarOpened: false,
+  posts: [],
+  selectedPost: null
 };
 
 /**

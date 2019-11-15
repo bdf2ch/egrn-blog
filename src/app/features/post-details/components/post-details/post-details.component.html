@@ -1,0 +1,17 @@
+<div class="row mt-2">
+  <div class="col-12">
+    <button type="button" class="btn btn-outline-primary" routerLink="/">&larr; Назад к списку публикаций</button>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-12 caption">{{(selectedPost$ | async).title}}</div>
+</div>
+
+<div class="row">
+  <div class="col-12 date text-muted">размещено {{(selectedPost$ | async).date}}</div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-12 content" [innerHTML]="message"></div>
+</div>

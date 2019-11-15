@@ -1,7 +1,6 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import {
-  IResourceMethod,
   IResourceMethodStrict,
   Resource,
   ResourceAction,
@@ -10,9 +9,8 @@ import {
   ResourceRequestMethod
 } from '@ngx-resource/core';
 
-import {environment} from '../../environments/environment';
-import {IPost} from '../interfaces';
-import {Post} from '../models';
+import { environment } from '../../environments/environment';
+import { IPost } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -44,11 +42,4 @@ export class BlogResource extends Resource {
     withCredentials: true
   })
   getPostByUrl: IResourceMethodStrict<void, void, {url: string}, IPost>;
-
-  @ResourceAction({
-    path: '/{!url}',
-    method: ResourceRequestMethod.Get,
-    withCredentials: true
-  })
-  getPostById: IResourceMethodStrict<void, void, {id: string}, IPost>;
 }

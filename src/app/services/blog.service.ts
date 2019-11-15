@@ -16,10 +16,21 @@ export class BlogService {
   /**
    * Получение списка постов блога
    */
-  loadListOfPosts(): Observable<{contents: IPost[], totalElements: number}> {
+  getListOfPosts(): Observable<{contents: IPost[], totalElements: number}> {
     return from(this.resource.getListOfPosts())
       .pipe(
         map((response: {contents: IPost[], totalElements: number}) => response)
+      );
+  }
+
+  /**
+   * Получение поста блога по URL
+   * @param url - URL
+   */
+  getPostByUrl(url: string): Observable<IPost> {
+    return from(this.resource.getPostByUrl(null, null, {url}))
+      .pipe(
+        map((response: IPost) => response)
       );
   }
 }

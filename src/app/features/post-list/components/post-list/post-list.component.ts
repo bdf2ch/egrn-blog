@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {IApplicationState} from "../../../../store";
-import {select, Store} from "@ngrx/store";
-import {Observable} from "rxjs";
-import {Post} from "../../../../models";
-import {selectPosts} from '../../../../store';
+
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
+import { IApplicationState, selectPosts } from '../../../../store';
+import { Post } from '../../../../models/post.model';
 
 @Component({
   selector: 'app-post-list',

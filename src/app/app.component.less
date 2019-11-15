@@ -1,0 +1,53 @@
+.nav-bar {
+  a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #353535;
+    transition: opacity .2s ease-in-out,color .2s ease-in-out;
+    &:hover {
+      color: #1565c0;
+    }
+  }
+}
+
+.copyright {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.8em;
+}
+
+#sidebar {
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #eceff1;
+  transition: left linear 0.2s;
+
+  &.closed {
+    left: 100%;
+  }
+
+  .close {
+    font-size: 40px;
+    cursor: pointer;
+    color: #b0bec5;
+    &:hover {
+      color: #78909c;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+  }
+}
